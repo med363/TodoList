@@ -103,7 +103,10 @@ class _MyAppState extends State<MyApp> {
           ),
 
         ],
-        scrollDirection: Axis.vertical,
+        reverse: true,
+        /*physics: NeverScrollableScrollPhysics()*/
+          addAutomaticKeepAlives: false ,
+        cacheExtent: 100.0,
       ),
     );
   }
