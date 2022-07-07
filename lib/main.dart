@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+/*      appBar: AppBar(
         title:Text("various ListView"),
       ),
       body: ListView(
@@ -108,6 +108,20 @@ class _MyAppState extends State<MyApp> {
           addAutomaticKeepAlives: false ,
         cacheExtent: 100.0,
       ),
-    );
+    );*/
+    
+      appBar: AppBar(
+        title:Text("various ListView"),
+      ),
+      body: /*build items on demand*/
+      /*ListView.builder(itemBuilder: (_, index)=>
+      Text('Item $index'))*/
+      /*seperate items*/
+      ListView.separated(itemBuilder: (_, index)=>Text('Item $index'), separatorBuilder: (_, __)=>Divider(), itemCount: 30,
+      )
+          ,
+      );
+    
+  
   }
 }
